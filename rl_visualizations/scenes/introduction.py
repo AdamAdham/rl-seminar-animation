@@ -1,7 +1,7 @@
 from manim import *
 
 
-class ExpectationScene(Scene):
+class Introduction(Scene):
     def construct(self):
         title = Text("What is Next?", font_size=72).to_edge(UP)
         self.add(title)
