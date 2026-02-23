@@ -3,7 +3,7 @@ from manim import *
 
 class Introduction(Scene):
     def construct(self):
-        title = Text("What is Next?", font_size=72).to_edge(UP)
+        title = Text("What's Next?", font_size=72).to_edge(UP)
         self.add(title)
 
         description = Text(
