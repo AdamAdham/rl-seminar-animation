@@ -47,6 +47,7 @@ class ExpectedReward(Scene):
         self.play(
             expected_reward_function[-1].animate.set_color(RED),
             expected_reward_function[-2].animate.set_color(GREEN),
+            expected_reward_function[-3].animate.set_color(GREEN),
             # No dynamics
             expected_reward_function_no_dynamics[-1].animate.set_color(RED),
             expected_reward_function_no_dynamics[-2].animate.set_color(GREEN),
