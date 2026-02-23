@@ -15,7 +15,7 @@ class ExpectedReward(Scene):
             r"\sum_{s'}\, p(s', r \mid s,a)",
         )
 
-        self.add(expected_reward_function)
+        self.play(Create(expected_reward_function), set_time=3)
 
         # Highlight expectation as in progress (blue)
         self.wait(2)
