@@ -132,16 +132,16 @@ class ExpectedReturnFirstScene(Scene):
             Write(right_term),
         )
 
-        keep_equation_object = VGroup(lhs_equation, left_term)
+        keep_equation_object = VGroup(left_term)
 
         self.wait(3)
         self.play(
             *[
                 FadeOut(mob)
                 for mob in self.mobjects
-                if mob not in [lhs_equation, left_term, keep_equation_object, title]
+                if mob not in [left_term, keep_equation_object, title]
             ],
-            keep_equation_object.animate.set_color(WHITE).shift(UP * 3),
+            keep_equation_object.animate.set_color(WHITE).shift(UP * 3 + LEFT * 0.8),
         )
 
         rearranged_equation = MathTex(
@@ -179,7 +179,6 @@ class ExpectedReturnFirstScene(Scene):
         # Final left term
         self.wait(2)
         final_left_term = MathTex(
-            r"v_{\pi}(s)",
             r"=",
             r"\sum_{a}\pi(a\mid s)",
             r"\mathbb{E}\!\left[ R_{t+1} \mid s,\; a \right]",
