@@ -169,10 +169,7 @@ class PolicyScene(Scene):
             text.set_color(arm_colors[i])
             prob_texts.add(text)
 
-        # --------------------------------------------------
-        # GROUP EVERYTHING FIRST (NEW PART)
-        # --------------------------------------------------
-
+        # Group graph to adjust postion
         graph_group = VGroup(
             axes,
             axes_labels,
@@ -186,10 +183,7 @@ class PolicyScene(Scene):
         graph_group.next_to(multi_arm_group, RIGHT, buff=1.4)
         graph_group.scale(0.8)
 
-        # --------------------------------------------------
-        # SAME ANIMATIONS AS BEFORE
-        # --------------------------------------------------
-
+        # Animations
         self.play(Create(axes), Write(axes_labels))
         self.play(*[Write(t) for t in x_ticks])
         self.play(*[Create(l) for l in prob_lines], *[FadeIn(d) for d in prob_dots])
