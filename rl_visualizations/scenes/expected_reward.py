@@ -85,10 +85,10 @@ class ExpectedReward(Scene):
         combined_marginalization[4].set_color(GOLD_D)
         combined_marginalization[6].set_color(GOLD_D)
 
-        combined_marginalization[2][-2].set_color(PURPLE_C)
-        combined_marginalization[2][-7].set_color(PURPLE_C)
-        combined_marginalization[-3].set_color(PURPLE_C)
-        combined_marginalization[-1].set_color(PURPLE_C)
+        combined_marginalization[2][-2].set_color(TEAL)
+        combined_marginalization[2][-7].set_color(TEAL)
+        combined_marginalization[-3].set_color(TEAL)
+        combined_marginalization[-1].set_color(TEAL)
 
         self.play(Create(combined_marginalization))
 
@@ -111,9 +111,9 @@ class ExpectedReward(Scene):
         # Coloring by index
         marginal_r[1].set_color(GOLD_D)  # first r
         marginal_r[2].set_color(GOLD_D)  # r | s,a
-        marginal_r[6].set_color(PURPLE_C)  # s' in summation
-        marginal_r[7].set_color(PURPLE_C)  # s' inside joint
-        marginal_r[9].set_color(PURPLE_C)  # r inside joint
+        marginal_r[6].set_color(TEAL)  # s' in summation
+        marginal_r[7].set_color(TEAL)  # s' inside joint
+        marginal_r[9].set_color(TEAL)  # r inside joint
         marginal_r[11].set_color(GOLD_D)  # r inside joint
 
         self.play(Create(marginal_r))
