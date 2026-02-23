@@ -16,7 +16,7 @@ class ExpectationScene(Scene):
         description_two = Text(
             "This is done by maximizing the return function:",
             font_size=30,
-            t2c={"Expectation": GREEN, "value": RED, "probability": BLUE},
+            t2c={"maximizing": BLUE, "return": BLUE},
         ).next_to(description, DOWN, buff=0.6, aligned_edge=LEFT)
 
         return_function = MathTex(
