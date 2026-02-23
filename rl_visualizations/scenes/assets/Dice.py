@@ -10,11 +10,18 @@ class Dice(VGroup):
     """
 
     def __init__(
-        self, value: int = 1, size: float = 2, pip_radius: float | None = None, **kwargs
+        self,
+        value: int = 1,
+        size: float = 2,
+        pip_radius: float | None = None,
+        color: ManimColor = BLACK,
+        **kwargs,
     ):
         super().__init__(**kwargs)
 
         self.size = size
+        self.color = color
+
         if pip_radius is None:
             pip_radius = size / 10
         self.pip_radius = pip_radius
@@ -39,7 +46,7 @@ class Dice(VGroup):
         return Dot(
             point=np.array([x, y, 0]),
             radius=self.pip_radius,
-            color=RED,
+            color=self.color,
         )
 
     def _create_pips(self, value):
