@@ -43,10 +43,7 @@ In the environment model, rewards are stochastic:
 ### Expected Reward Definition
 
 $$
-r(s,a) =
-\mathbb{E}[R_{t+1}\mid S_t=s, A_t=a]
-=
-\sum_{r} r \sum_{s'} p(s',r\mid s,a)
+r(s,a) =\mathbb{E}[R_{t+1}\mid S_t=s, A_t=a]=\sum_{r} r \sum_{s'} p(s',r\mid s,a)
 $$
 
 This defines the average immediate reward obtained when taking action \(a\) in state \(s\).
@@ -84,11 +81,7 @@ Marginalization removes variables that are not of interest by summing over them.
 Summing over card numbers yields the probability of drawing a specific suit:
 
 $$
-P(\text{hearts})
-=
-\sum_{n=1}^{13} P(SUIT=\text{hearts}, NUM=n)
-=
-\frac{1}{4}
+P(\text{hearts})=\sum_{n=1}^{13} P(SUIT=\text{hearts}, NUM=n)=\frac{1}{4}
 $$
 
 ---
@@ -149,7 +142,7 @@ The intuition:
 
 > choose the policy producing the highest expected future return.
 
-## 9. Policy Iteration (Example Process)
+## 8. Policy Iteration (Example Process)
 
 The presentation concludes with the iterative improvement procedure:
 
